@@ -13,6 +13,23 @@
 
 ActiveRecord::Schema.define(version: 20150417214412) do
 
+  # These are extensions that must be enabled in order to support this database
+  enable_extension "plpgsql"
+
+  create_table "data", force: :cascade do |t|
+    t.datetime "created_at",                                null: false
+    t.datetime "updated_at",                                null: false
+    t.string   "home"
+    t.string   "away"
+    t.decimal  "odd_win_home",      precision: 4, scale: 3
+    t.decimal  "odd_draw",          precision: 4, scale: 3
+    t.decimal  "odd_win_away",      precision: 4, scale: 3
+    t.decimal  "surebet",           precision: 4, scale: 3
+    t.decimal  "surebet_risk_draw", precision: 4, scale: 3
+    t.decimal  "surebet_risk_home", precision: 4, scale: 3
+    t.decimal  "surebet_risk_away", precision: 4, scale: 3
+  end
+
   create_table "games", force: :cascade do |t|
     t.string   "win_home"
     t.string   "draw"
