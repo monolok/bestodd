@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  win_home: MyString
+  draw: MyString
+  win_away: MyString
+
+two:
+  win_home: MyString
+  draw: MyString
+  win_away: MyString
