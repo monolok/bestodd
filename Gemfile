@@ -26,7 +26,8 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
-gem 'nokogiri'
+#gem 'nokogiri'
+gem 'httparty'
 gem 'font-awesome-rails'
 gem 'bootstrap-sass'
 gem 'autoprefixer-rails'
