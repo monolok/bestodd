@@ -16,7 +16,6 @@ require 'open-uri'
 
 		#ZIP
 		@game_data = @games.zip @odds
-
 		#mailer logic
 		SendBet.bet_data(@game_data).deliver_now
 	end

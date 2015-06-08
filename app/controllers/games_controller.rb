@@ -1,21 +1,20 @@
 class GamesController < ApplicationController
-#require 'open-uri'
+require 'open-uri'
 
 	def index
-		# @games = Array.new
-		# @odds = Array.new
+		@games = Array.new
+		@odds = Array.new
 
-		# #get URL
-		# url = "http://www.ruedesjoueurs.com/pronostics/foot.html"
-		# doc = Nokogiri::HTML(open(url))
-		# @show = doc.at_css("title").text
+		#get URL
+		url = "http://www.ruedesjoueurs.com/pronostics/foot.html"
+		doc = Nokogiri::HTML(open(url))
+		@show = doc.at_css("title").text
 
-		# #XPATH
-		# @games = doc.xpath("//div[contains(@class,'teams')]").collect {|node| node.text.strip.gsub(/\r/," ").gsub(/\n/," ")}
-		# @odds = doc.xpath("//li[contains(@style, 'width:572px;')]/ul").collect {|node| node.text.strip.gsub(/\r/," ").gsub(/\n/," ")}
-
-		# #ZIP
-		# @game_data = @games.zip @odds
+		#XPATH
+		@games = doc.xpath("//ul[contains(@class, 'matchs classement uk-list')]").collect {|node| node.text.strip.gsub(/\r/," ").gsub(/\n/," ")}
+		#@??? = ???
+		#ZIP
+		@game_data = @games.zip @odds
 
 	end
 
